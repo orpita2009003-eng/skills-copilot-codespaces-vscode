@@ -167,8 +167,8 @@ def visualize_binary_classification(results_wifi, results_ltem, filename):
     # Add text annotations
     for i in range(2):
         for j in range(2):
-            text = axes[0].text(j, i, int(wifi_matrix[i, j]),
-                              ha="center", va="center", color="black", fontsize=14)
+            axes[0].text(j, i, int(wifi_matrix[i, j]),
+                        ha="center", va="center", color="black", fontsize=14)
     
     # Plot LTE-M confusion matrix
     im2 = axes[1].imshow(ltem_matrix, cmap='Greens', aspect='auto')
@@ -181,8 +181,8 @@ def visualize_binary_classification(results_wifi, results_ltem, filename):
     # Add text annotations
     for i in range(2):
         for j in range(2):
-            text = axes[1].text(j, i, int(ltem_matrix[i, j]),
-                              ha="center", va="center", color="black", fontsize=14)
+            axes[1].text(j, i, int(ltem_matrix[i, j]),
+                        ha="center", va="center", color="black", fontsize=14)
     
     plt.tight_layout()
     plt.savefig(filename, dpi=150)
