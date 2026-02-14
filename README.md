@@ -19,6 +19,10 @@ pip install -r requirements.txt
 
 # Run the complete example
 python example_complete.py
+
+# Optional: Generate visualizations (requires matplotlib)
+pip install matplotlib
+python visualize.py
 ```
 
 ## 📁 Files
@@ -26,6 +30,7 @@ python example_complete.py
 - **`channel_extractor.py`** - Extract per-channel I/Q data from multi-channel signals
 - **`binary_classifier.py`** - Binary classifier for channel occupancy detection  
 - **`example_complete.py`** - Complete workflow demonstration
+- **`visualize.py`** - Generate visualization plots (requires matplotlib)
 - **`DOCUMENTATION.md`** - Detailed technical documentation
 
 ## 💡 Key Features

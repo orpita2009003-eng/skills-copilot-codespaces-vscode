@@ -1,1 +1,4 @@
 numpy>=1.20.0
+
+# Optional: For visualizations
+# matplotlib>=3.0.0
