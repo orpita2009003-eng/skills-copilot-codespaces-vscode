@@ -245,7 +245,6 @@ def main():
 
 if __name__ == "__main__":
     try:
-        import matplotlib.pyplot as plt
         main()
     except ImportError:
         print("\nNote: matplotlib is required for visualizations.")

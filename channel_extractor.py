@@ -87,8 +87,7 @@ class ChannelExtractor:
             shifted = iq_data * shift[np.newaxis, :]
         
         # Low-pass filter using a simple moving average (can be replaced with better filter)
-        filter_length = int(self.sample_rate / self.channel_bandwidth)
-        filter_length = max(1, filter_length)
+        filter_length = max(1, int(self.sample_rate / self.channel_bandwidth))
         
         if iq_data.ndim == 1:
             filtered = np.convolve(shifted, np.ones(filter_length)/filter_length, mode='same')

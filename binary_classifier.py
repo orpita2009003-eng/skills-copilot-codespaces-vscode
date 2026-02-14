@@ -10,6 +10,11 @@ from typing import Tuple, Optional, List
 import json
 
 
+# Constants for sigmoid activation function
+SIGMOID_CLIP_MIN = -500
+SIGMOID_CLIP_MAX = 500
+
+
 class BinaryChannelClassifier:
     """
     Binary classifier for single-channel occupancy detection.
@@ -118,7 +123,7 @@ class BinaryChannelClassifier:
     
     def sigmoid(self, x: np.ndarray) -> np.ndarray:
         """Sigmoid activation function."""
-        return 1 / (1 + np.exp(-np.clip(x, -500, 500)))
+        return 1 / (1 + np.exp(-np.clip(x, SIGMOID_CLIP_MIN, SIGMOID_CLIP_MAX)))
     
     def relu(self, x: np.ndarray) -> np.ndarray:
         """ReLU activation function."""
